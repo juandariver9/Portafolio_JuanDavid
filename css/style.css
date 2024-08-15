@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    font-family: nasa;
+    color: white;
+}
+
+body {
+    background-color: #0c1a31;
+    overflow-x: hidden;
+
+}
+
+.gridContainer {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    gap: 1px;
+}
+
+.item {
+    display: flex;
+    background-color: white;
+}
+
+#item1 {
+    height: 100vh;
+
+}
+
+/*---------------------Nav bar-------------------*/
+
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed; /* Fija la navbar en la parte superior */
+    top: 0;
+    left: 50%;
+    transform: translate(-50.5%);
+    width: 768px;
+    z-index: 1000; /* Asegura que la navbar esté siempre en la parte superior */
+    display: flex; /* Usamos flexbox para centrar los enlaces */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 60px; /* Ajusta la altura según lo necesites */
+}
+
+.navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Responsive design */
+@media screen and (max-width: 767px) {
+    .navbar {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+    }
+
+    .navbar a {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+    }
+}
+
+/* Espaciado superior para evitar que el contenido se sobreponga con la navbar */
+.content {
+    padding-top: 70px; /* Ajusta el padding top para dar espacio a la navbar */
+}
+
+
+/*---------------------------------------------------*/
