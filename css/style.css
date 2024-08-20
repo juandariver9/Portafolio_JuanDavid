@@ -415,7 +415,7 @@ footer {
 
 #profile {
     position: absolute;
-    right: 10vw;
+    right: 5vw;
     width: 400px;
     animation: fadeInUp 1s ease-in-out;
 }
@@ -648,3 +648,114 @@ footer {
     margin-top: 100px;
     font-size: 2.1rem;
 }
+
+footer svg {
+    padding-top: 1px;
+    fill: white;
+}
+
+@keyframes unique-animate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  .unique-container {
+    position: relative;
+    top: -80px;
+    transform: skewY(-20deg);
+    animation: unique-animate 5s linear infinite;
+  }
+  .unique-cube {
+    position: relative;
+    z-index: 2;
+  }
+  .unique-cube:nth-child(2) {
+    z-index: 1;
+    translate: -60px -60px;
+  }
+  .unique-cube:nth-child(3) {
+    z-index: 3;
+    translate: 60px 60px;
+  }
+  .unique-cube div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    translate: calc(-70px * var(--unique-x)) calc(-60px * var(--unique-y));
+  }
+  .unique-cube div span {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #dcdcdc;
+    z-index: calc(1 * var(--unique-i));
+    transition: 1.5s;
+  }
+  .unique-cube div span:hover {
+    transition: 0s;
+    background: #ef4149;
+    filter: drop-shadow(0 0 30px #ef4149);
+  }
+  .unique-cube div span:hover:before,
+  .unique-cube div span:hover:after {
+    transition: 0s;
+    background: #ef4149;
+  }
+  .unique-cube div span:before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #fff;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 1.5s;
+  }
+  .unique-cube div span:after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    background: #f2f2f2;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 1.5s;
+  }
+  
+  #profile2 {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 5px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+  
+  #profile3 {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+    border: 4px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    display: block;
+    height: auto;
+  }
+  

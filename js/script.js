@@ -89,7 +89,7 @@ window.addEventListener('scroll', function() {
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
-    
+
     const nombre = event.target.nombre.value;
     const email = event.target.email.value;
     const mensaje = event.target.mensaje.value;
@@ -101,3 +101,5 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     alert('Formulario enviado con éxito');
 
 });
+
+
