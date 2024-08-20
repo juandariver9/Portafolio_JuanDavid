@@ -85,3 +85,19 @@ window.addEventListener('scroll', function() {
         scrollToTopBtn.classList.remove('visible');
     }
 });
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    
+    const nombre = event.target.nombre.value;
+    const email = event.target.email.value;
+    const mensaje = event.target.mensaje.value;
+
+    console.log('Nombre:', nombre);
+    console.log('Email:', email);
+    console.log('Mensaje:', mensaje);
+
+    alert('Formulario enviado con éxito');
+
+});

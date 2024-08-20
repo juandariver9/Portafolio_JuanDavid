@@ -1,11 +1,17 @@
+@font-face {
+    font-family: monserrate;
+    src: url(/storage/fonts/Montserrat-Medium.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: monserrate ;
 }
 
 ul {
-    list-style: none;
+    list-style: decimal;
 }
 
 body {
@@ -129,6 +135,9 @@ h2 {
     width: max-content;
 }
 
+h3 {
+    font-size: 2.3rem;
+}
 
 
 /* Profile Section */
@@ -153,12 +162,22 @@ h2 {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+#mision-vision-valores p, .box li {
+    font-size: 1.4rem;
+    text-align: left;
+}
 
 /* Certification Section */
 .certificaciones-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+}
+.certificacion p{
+    font-size: 1.4rem;
+}
+.certificacion h3{
+    font-size: 2rem;
 }
 
 .certificacion {
@@ -181,6 +200,14 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
+
+#servicios p {
+    font-size: 1.4rem;
+}
+#servicios h3 {
+    font-size: 1.9rem;
+}
+
 
 .servicio {
     background: #fff;
@@ -208,6 +235,14 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto p{
+    font-size: 1.4rem;
+}
+.proyecto h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 /* Contact Form */
@@ -380,7 +415,7 @@ footer {
 
 #profile {
     position: absolute;
-    right: 20vw;
+    right: 10vw;
     width: 400px;
     animation: fadeInUp 1s ease-in-out;
 }
@@ -602,4 +637,14 @@ footer {
 
 #SD, #AM, #OP, #C,#S,#P{
     font-size: 3rem;
+}
+
+
+#contacto {
+    display: flex;
+}
+
+#messageContact {
+    margin-top: 100px;
+    font-size: 2.1rem;
 }
